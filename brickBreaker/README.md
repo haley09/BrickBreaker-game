@@ -14,3 +14,11 @@ A desktop Brick Breaker game built with Java Swing. The project includes paddle 
 - Lives system
 - Restart support
 - Start menu screen
+
+## How to Run
+Compile and run the main entry point:
+
+```bash
+javac brickBreaker/*.java
+java brickBreaker.Main
+```

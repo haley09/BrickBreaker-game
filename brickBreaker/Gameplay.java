@@ -42,7 +42,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     private int score = 0;
     private int lives = 3;
 
-    private int totalBricks = 21;
+    private static final int BRICK_ROWS = 3;
+    private static final int BRICK_COLUMNS = 7;
+    private static final int TOTAL_BRICKS = BRICK_ROWS * BRICK_COLUMNS;
+
+    private int totalBricks = TOTAL_BRICKS;
 
     private Timer timer;
     private int delay = 8;
@@ -57,7 +61,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     private MapGenerator map;
 
     public Gameplay() {
-        map = new MapGenerator(3, 7);
+        map = new MapGenerator(BRICK_ROWS, BRICK_COLUMNS);
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
@@ -211,13 +215,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         play = false;
         score = 0;
         lives = 3;
-        totalBricks = 21;
+        totalBricks = TOTAL_BRICKS;
         playerX = INITIAL_PLAYER_X;
         ballPosX = INITIAL_BALL_X;
         ballPosY = INITIAL_BALL_Y;
         ballXdir = INITIAL_BALL_X_DIR;
         ballYdir = INITIAL_BALL_Y_DIR;
-        map = new MapGenerator(3, 7);
+        map = new MapGenerator(BRICK_ROWS, BRICK_COLUMNS);
         repaint();
     }
 

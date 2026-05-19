@@ -1,6 +1,7 @@
 package brickBreaker;
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 public class Main {
     private JFrame frame = new JFrame();
@@ -17,6 +18,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        new Main();
+        SwingUtilities.invokeLater(MenuScreen::new);
     }
 }
